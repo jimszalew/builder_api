@@ -3,10 +3,33 @@
     "coverage": {
       "/Users/jimszalewski/Repos/builder_api/app/models/card.rb": [
         1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        41,
+        null,
         null
       ],
       "/Users/jimszalewski/Repos/builder_api/app/models/application_record.rb": [
         1,
+        1,
+        null
+      ],
+      "/Users/jimszalewski/Repos/builder_api/app/controllers/api/v1/cards_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/jimszalewski/Repos/builder_api/app/controllers/application_controller.rb": [
         1,
         null
       ],
@@ -22,15 +45,8 @@
         0,
         0
       ],
-      "/Users/jimszalewski/Repos/builder_api/app/controllers/api/v1/cards_controller.rb": [
-
-      ],
       "/Users/jimszalewski/Repos/builder_api/app/controllers/api/v1/users/decks/cards_controller.rb": [
 
-      ],
-      "/Users/jimszalewski/Repos/builder_api/app/controllers/application_controller.rb": [
-        0,
-        0
       ],
       "/Users/jimszalewski/Repos/builder_api/app/jobs/application_job.rb": [
         0,
@@ -43,6 +59,6 @@
         0
       ]
     },
-    "timestamp": 1516382525
+    "timestamp": 1516387255
   }
 }

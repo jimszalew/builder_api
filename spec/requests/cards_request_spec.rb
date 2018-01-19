@@ -13,8 +13,12 @@ describe "Card API", type: :request do
     expect(cards.count).to eq(20)
   end
 
-  # it "returns a card by name" do
-  # end
+  it "returns a card by name" do
+    create_list(:card, 20)
+    card1 = Card.first
+
+    get "/api/v1/cards/#{card1.name.parameterize}"
+  end
   # it "returns all cards by color" do
   # end
   # it "returns all cards by card type" do
