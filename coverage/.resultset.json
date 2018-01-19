@@ -1,0 +1,48 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/jimszalewski/Repos/builder_api/app/models/card.rb": [
+        1,
+        null
+      ],
+      "/Users/jimszalewski/Repos/builder_api/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/jimszalewski/Repos/builder_api/app/channels/application_cable/channel.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/jimszalewski/Repos/builder_api/app/channels/application_cable/connection.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/jimszalewski/Repos/builder_api/app/controllers/api/v1/cards_controller.rb": [
+
+      ],
+      "/Users/jimszalewski/Repos/builder_api/app/controllers/api/v1/users/decks/cards_controller.rb": [
+
+      ],
+      "/Users/jimszalewski/Repos/builder_api/app/controllers/application_controller.rb": [
+        0,
+        0
+      ],
+      "/Users/jimszalewski/Repos/builder_api/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/Users/jimszalewski/Repos/builder_api/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1516382525
+  }
+}
