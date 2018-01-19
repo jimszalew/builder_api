@@ -27,6 +27,28 @@
         1,
         null
       ],
+      "/Users/jimszalewski/Repos/builder_api/app/controllers/api/v1/card_search_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/jimszalewski/Repos/builder_api/app/models/card_search.rb": [
+        1,
+        1,
+        1,
+        6,
+        364,
+        23,
+        1,
+        1,
+        7,
+        null,
+        1,
+        null,
+        null
+      ],
       "/Users/jimszalewski/Repos/builder_api/app/channels/application_cable/channel.rb": [
         0,
         0,
@@ -106,6 +128,6 @@
         0
       ]
     },
-    "timestamp": 1516395767
+    "timestamp": 1516401941
   }
 }
