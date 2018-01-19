@@ -47,7 +47,7 @@ describe "Card API", type: :request do
     expect(response).to be_success
 
     cards = JSON.parse(response.body)
-require "pry"; binding.pry
+# require "pry"; binding.pry
     expect(cards.count).to eq(7)
   end
 end
