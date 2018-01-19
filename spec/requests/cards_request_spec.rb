@@ -26,11 +26,13 @@ describe "Card API", type: :request do
     expect(card["name"]).to eq(card1.name)
   end
 
-  # it "returns all cards by cardTypes" do
-  #   create_list(:card, 5)
-  #
-  #   get "/api/v1/cards/types/"
-  # end
-  # it "returns all cards by card type" do
-  # end
+  it "returns all cards by colorIdentity" do
+    create_list(:card, 5)
+    create_list(:card, 5)
+    card1 = Card.first
+require "pry"; binding.pry
+    get "/api/v1/cards/colorIdentity/#{card1.colorIdentity}"
+
+    expect(response).to be_success
+  end
 end
