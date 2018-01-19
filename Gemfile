@@ -21,6 +21,7 @@ gem 'bootstrap-sass'
 gem 'brakeman'
 gem 'rubycritic'
 gem 'will_paginate'
+gem 'friendly_id'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -4,7 +4,6 @@ class Api::V1::CardsController < ApplicationController
   end
 
   def show
-    require "pry"; binding.pry
-    render json: Card.find_by(name: params['slug'])
+    render json: Card.friendly.find(params['id'])
   end
 end
