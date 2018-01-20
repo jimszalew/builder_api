@@ -12,8 +12,12 @@
         1,
         null
       ],
-      "/Users/jimszalewski/Repos/builder_api/app/controllers/api/v1/card_search_controller.rb": [
+      "/Users/jimszalewski/Repos/builder_api/app/controllers/api/v1/cards_controller.rb": [
         1,
+        1,
+        1,
+        null,
+        null,
         1,
         1,
         null,
@@ -23,29 +27,52 @@
         1,
         null
       ],
+      "/Users/jimszalewski/Repos/builder_api/app/controllers/api/v1/card_search_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
       "/Users/jimszalewski/Repos/builder_api/app/models/card_search.rb": [
         1,
         1,
         1,
-        6,
-        364,
-        23,
-        1,
-        1,
-        1,
-        7,
-        null,
-        null,
-        null
-      ],
-      "/Users/jimszalewski/Repos/builder_api/app/controllers/api/v1/cards_controller.rb": [
-        1,
         1,
         1,
         null,
+        1,
+        0,
+        null,
+        null,
         null,
         1,
+        2,
+        12,
+        728,
+        46,
+        2,
+        2,
+        14,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         1,
+        0,
+        null,
         null,
         null
       ],
@@ -128,6 +155,6 @@
         0
       ]
     },
-    "timestamp": 1516404160
+    "timestamp": 1516475490
   }
 }

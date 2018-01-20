@@ -1,5 +1,7 @@
 class Api::V1::CardSearchController < ApplicationController
   def index
-    render json: CardSearch.cards_by_color(params['colors'])
+    # require "pry"; binding.pry
+    # render json: CardSearch.cards_by_color(params['colors'])
+    render json: CardSearch.finder(params)
   end
 end

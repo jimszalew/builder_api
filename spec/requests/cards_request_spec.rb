@@ -43,11 +43,26 @@ describe "Card API", type: :request do
     end
 
     get "/api/v1/card_search?colors=W,U,B"
-
+require "pry"; binding.pry
     expect(response).to be_success
 
     cards = JSON.parse(response.body)
-# require "pry"; binding.pry
+
     expect(cards.count).to eq(7)
   end
+
+  # xit "returns all cards by one type" do
+  #   create_list(:card, 3, cardTypes: "Instant")
+  #   create_list(:card, 3, cardTypes: "Artifact")
+  #   create_list(:card, 3, cardTypes: "Sorcery")
+  #   create_list(:card, 3, cardTypes: "Creature")
+  #
+  #   get "/api/v1/card_search?types=Instant"
+  #
+  #   expect(response).to be_success
+  #
+  #   cards = JSON.parse(response.body)
+  #
+  #   expect(cards.count).to eq(3)
+  # end
 end
