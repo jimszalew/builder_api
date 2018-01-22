@@ -10,19 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180119202740) do
+ActiveRecord::Schema.define(version: 20180122163200) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cards", force: :cascade do |t|
     t.string "name"
-    t.string "cardTypes"
+    t.string "card_types"
     t.integer "cmc"
-    t.string "colorIdentity"
-    t.string "manaCost"
-    t.string "cardLayout"
-    t.string "rulesText"
+    t.string "color_id"
+    t.string "mana_cost"
+    t.string "card_layout"
+    t.string "rules_text"
     t.string "power"
     t.string "toughness"
     t.string "imageName"
