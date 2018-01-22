@@ -4,21 +4,21 @@ FactoryBot.define do
       "Card #{n}"
     end
 
-    sequence :cardTypes do |n|
+    sequence :card_types do |n|
       "#{n},#{n + 1},#{n + 2}"
     end
 
     cmc 1
 
-    sequence :colorIdentity do |n|
+    sequence :color_id do |n|
       "#{n},#{n + 1},#{n + 2}"
     end
 
-    sequence :manaCost do |n|
+    sequence :mana_cost do |n|
       "#{n},#{n + 1},#{n + 2}"
     end
 
-    sequence :rulesText do |n|
+    sequence :rules_text do |n|
       "Deals #{n} damage"
     end
 

@@ -15,7 +15,7 @@
       "/Users/jimszalewski/Repos/builder_api/app/controllers/api/v1/card_search_controller.rb": [
         1,
         1,
-        1,
+        2,
         null,
         null
       ],
@@ -26,12 +26,15 @@
       "/Users/jimszalewski/Repos/builder_api/app/models/card_search.rb": [
         1,
         1,
+        2,
+        2,
+        2,
+        1,
         null,
+        2,
         1,
-        1,
-        1,
-        1,
-        0,
+        null,
+        2,
         null,
         null,
         1,
@@ -43,6 +46,7 @@
         1,
         7,
         null,
+        1,
         null,
         null,
         1,
@@ -145,6 +149,6 @@
         0
       ]
     },
-    "timestamp": 1516545306
+    "timestamp": 1516643581
   }
 }
