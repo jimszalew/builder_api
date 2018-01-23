@@ -7,6 +7,11 @@ class CardSearch
     @types  = params[:types]
   end
 
+  def excluded_colors
+    all_colors = ["W","U","B","R","G"]
+    search = colors.split(',')
+    (all_colors - search)
+  end
 end
 
 # class CardSearch

@@ -15,7 +15,10 @@ RSpec.describe CardSearch, type: :model do
 
   describe 'excluded_colors' do
     it 'returns colors excluded from the search params' do
+      params = {colors: "W,U,B", types: "Creature"}
+      cards = CardSearch.new(params)
 
+      expect(cards.excluded_colors).to eq(["R","G"])
     end
   end
 end
