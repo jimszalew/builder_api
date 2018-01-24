@@ -12,6 +12,20 @@ class CardSearch
     search = colors.split(',')
     (all_colors - search)
   end
+
+  def cards_in_colors
+    cards = []
+    excluded_colors.map do |color|
+      cards << Card.where.not("color_id LIKE ?", "%#{color}%")
+    end
+    array = cards.flatten
+    array.select{ |e| array.count(e) >= excluded_colors.count }.uniq
+  end
+
+  def self.finder(params)
+# require "pry"; binding.pry
+    new(params).cards_in_colors
+  end
 end
 
 # class CardSearch
