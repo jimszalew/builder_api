@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180122163200) do
+ActiveRecord::Schema.define(version: 20180125192135) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,14 @@ ActiveRecord::Schema.define(version: 20180122163200) do
     t.string "slug", null: false
     t.string "printings", default: [], array: true
     t.index ["slug"], name: "index_cards_on_slug", unique: true
+  end
+
+  create_table "decks", force: :cascade do |t|
+    t.float "budget"
+    t.float "max_per_card"
+    t.string "color_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
