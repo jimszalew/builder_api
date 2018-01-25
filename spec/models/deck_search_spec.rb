@@ -12,8 +12,4 @@ RSpec.describe DeckSearch, type: :model do
       expect(decks.max_per_card).to eq(params[:max_per_card])
     end
   end
-
-  describe 'finder' do
-
-  end
 end
