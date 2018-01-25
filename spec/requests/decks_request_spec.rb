@@ -13,7 +13,7 @@ describe "Deck API", type: :request do
     expect(decks.count).to eq(5)
   end
 
-  it "returns a deck by name" do
+  it "returns a single deck by id" do
     create(:deck)
     deck1 = Deck.first
 
@@ -23,6 +23,6 @@ describe "Deck API", type: :request do
 
     deck = JSON.parse(response.body)
 
-    expect(deck["name"]).to eq(deck1.name)
+    expect(deck["color_id"]).to eq(deck1.color_id)
   end
 end
