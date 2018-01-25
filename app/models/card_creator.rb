@@ -13,18 +13,18 @@ class CardCreator
               :printings
 
   def initialize(card)
-    @name          = card['name']
-    @cardTypes     = card['type']
-    @cmc           = card['cmc']
-    @colorIdentity = card['colorIdentity']
-    @manaCost      = card['manaCost']
-    @cardLayout    = card['cardLayout']
-    @rulesText     = card['text']
-    @power         = card['power']
-    @toughness     = card['toughness']
-    @imageName     = card['imageName']
-    @legalities    = card['legalities']
-    @printings     = card['printings']
+    @name          = card[:name]
+    @cardTypes     = card[:type]
+    @cmc           = card[:cmc]
+    @colorIdentity = card[:colorIdentity]
+    @manaCost      = card[:manaCost]
+    @cardLayout    = card[:layout]
+    @rulesText     = card[:text]
+    @power         = card[:power]
+    @toughness     = card[:toughness]
+    @imageName     = card[:imageName]
+    @legalities    = card[:legalities]
+    @printings     = card[:printings]
   end
 
   def legalities
@@ -32,8 +32,7 @@ class CardCreator
       @legalities = "N/A"
     else
       @legalities.map do |pair|
-        string = ","
-        pair['format'] + string + pair['legality']
+        pair[:format] + ", " + pair[:legality]
       end
     end
   end
