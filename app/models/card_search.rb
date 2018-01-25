@@ -1,34 +1,44 @@
 class CardSearch
-  def self.finder(params)
-    by_color = []
-    by_types = []
-    if params['colors'].present?
-      by_color = self.cards_by_color(params['colors'])
-    end
-    if params['types'].present?
-      by_types = self.cards_by_types(params['types'])
-    end
-    (by_color + by_types).uniq
+
+  attr_reader :colors, :types
+
+  def initialize(params)
+    @colors = params[:colors]
+    @types  = params[:types]
   end
 
-  def self.cards_by_color(colors)
-    colors_array = colors.split(',')
-    all_combos = (1..5).flat_map{|n| colors_array.repeated_permutation(n).map(&:join)}
-    all_combos.delete_if { |combo| combo.split(//).uniq.length != combo.split(//).length }
-    uniq_combos = all_combos.map { |combo| combo.split(//).sort }.uniq.map { |combo| combo.join(',') }
-    cards = []
-    uniq_combos.map do |color|
-      cards << Card.where(color_id: color)
-    end
-    cards
+  def excluded_colors
+    all_colors = ["W","U","B","R","G"]
+    search = colors.split(',')
+    (all_colors - search)
   end
 
-  def self.cards_by_types(types)
-    card_types = types.split(',')
+  def cards_in_colors
     cards = []
-    card_types.each do |tipe|
-      cards << Card.where("card_types LIKE ?", "%#{tipe}%")
+    excluded_colors.map do |color|
+      cards << Card.where.not("color_id LIKE ?", "%#{color}%")
     end
-    cards[0].uniq
+    array = cards.flatten
+    array.select{ |e| array.count(e) >= excluded_colors.count }.uniq
+  end
+
+  def cards_by_types
+    cards = []
+    type_array = types.split(',')
+    type_array.map do |card_type|
+      cards << Card.where("card_types LIKE ?", "%#{card_type}%")
+    end
+    cards.flatten
+  end
+
+  def finder
+    if types.present? && colors.present?
+      array = cards_in_colors + cards_by_types
+      array.select{ |e| array.count(e) > 1 }.uniq
+    elsif types.present? && !colors.present?
+      cards_by_types
+    elsif colors.present? && !types.present?
+      cards_in_colors
+    end
   end
 end
