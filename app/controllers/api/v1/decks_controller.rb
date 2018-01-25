@@ -1,9 +1,11 @@
 class Api::V1::DecksController < ApplicationController
   def index
-    render json: Deck.all
+    @decks = Deck.all
+    render json: @decks
   end
 
   def show
-    render json: Deck.find(params['id'])
+    @deck = Deck.find(params['id'])
+    render json: @deck
   end
 end
