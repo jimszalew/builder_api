@@ -1,5 +1,6 @@
 class Api::V1::CardSearchController < ApplicationController
   def index
-    render json: CardSearch.finder(params)
+    card_search = CardSearch.new(params)
+    render json: card_search.finder
   end
 end
