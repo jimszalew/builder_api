@@ -42,7 +42,7 @@ RSpec.describe CardCreator, type: :model do
                               ],
                 "colorIdentity": [ "W", "U", "G" ]
               }}
-  let(:card2) {{ "legalities": nil }}
+  let(:card2) {{ "legalities": nil, "colorIdentity": "W" }}
   let(:creator1) { CardCreator.new(card1) }
   let(:creator2) { CardCreator.new(card2) }
 
@@ -71,13 +71,17 @@ RSpec.describe CardCreator, type: :model do
     end
 
     it 'returns "N/A" if legalities is nil' do
-      expect(creator2.legalities).to eq("N/A")
+      expect(creator2.legalities).to eq('N/A')
     end
   end
 
-  # describe 'colorIdentity' do
-  #   it '' do
-  #
-  #   end
-  # end
+  describe 'colorIdentity' do
+    it 'returns a string of the color identities' do
+      expect(creator1.colorIdentity).to eq('W,U,G')
+    end
+
+    it 'returns a string if input is not an array' do
+      expect(creator2.colorIdentity).to eq('W')
+    end
+  end
 end
