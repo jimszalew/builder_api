@@ -12,7 +12,7 @@ Rails.application.routes.draw do
       get '/card_search', to: 'card_search#index'
       get '/deck_search', to: 'deck_search#index'
 
-      get '/deck/:id/commanders', to: 'commanders#index'
+      get '/decks/:id/commanders', to: 'commanders#index'
     end
   end
 end

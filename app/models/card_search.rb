@@ -41,4 +41,10 @@ class CardSearch
       cards_in_colors
     end
   end
+
+  def commanders
+    Card.where("card_types LIKE ?", "%Legendary%")
+        .where("card_types LIKE ?", "%Creature%")
+        .where(color_id: colors)
+  end
 end
