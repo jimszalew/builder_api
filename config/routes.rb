@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       get '/decks/:id', to: 'decks#show'
       post '/decks', to: 'decks#create'
       put '/decks/:id', to: 'decks#update'
+      delete '/deck_cards/:id', to: 'deck_cards#destroy'
 
       get '/card_search', to: 'card_search#index'
       get '/deck_search', to: 'deck_search#index'

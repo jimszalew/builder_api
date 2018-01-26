@@ -18,10 +18,6 @@ class Api::V1::DecksController < ApplicationController
     DeckCard.create(card_id: params['card_id'], commander: params['commander'], deck_id: params['id'])
   end
 
-  def destroy
-
-  end
-
   private
 
       def deck_params
