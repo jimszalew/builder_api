@@ -59,13 +59,4 @@ RSpec.describe CardSearch, type: :model do
       expect(cards.cards_in_colors.count).to eq(14)
     end
   end
-
-  # describe 'commanders(deck)' do
-  #   it 'returns all Legendary creatures matching the deck params' do
-  #     create_list(:card, 3, card_types: "Legendary Creature", color_id: "W,U,G")
-  #     create_list(:card, 3, card_types: "Legendary Creature", color_id: "W,G")
-  #     create_list(:card, 3, card_types: "Legendary Creature", color_id: "U")
-  #     deck = create(:deck, color_id: "W,U,G")
-  #   end
-  # end
 end

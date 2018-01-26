@@ -7,7 +7,7 @@ describe "Deck API", type: :request do
 
       get "/api/v1/decks"
 
-      expect(response).to be_success
+      expect(response).to have_http_status(200)
 
       decks = JSON.parse(response.body)
 
@@ -22,7 +22,7 @@ describe "Deck API", type: :request do
 
       get "/api/v1/decks/#{deck1.id}"
 
-      expect(response).to be_success
+      expect(response).to have_http_status(200)
 
       deck = JSON.parse(response.body)
 
@@ -31,18 +31,32 @@ describe "Deck API", type: :request do
   end
 
   describe "POST /decks" do
-    let(:valid_attributes) {{color_id: "W,U,G", budget: 350.75, max_per_card: 25}}
+    let(:attributes) {{color_id: "W,U,G", budget: 350.75, max_per_card: 25}}
     context "with valid info" do
       it "creates a new deck" do
-        post "/api/v1/decks", params: valid_attributes
+        post "/api/v1/decks", params: attributes
 
-        expect(response).to be_success
+        expect(response).to have_http_status(201)
 
         deck = JSON.parse(response.body)
 
         expect(deck['color_id']).to eq("W,U,G")
         expect(deck['budget']).to eq(350.75)
         expect(deck['max_per_card']).to eq(25)
+      end
+    end
+  end
+
+  describe "PUT /decks/:id" do
+    let(:deck) { create(:deck, color_id: "U,B,R") }
+    let(:card) { create(:card, color_id: "U,B,R", card_types: "Legendary Creature", name: "Sedris, the Traitor King")}
+    context "from a list of available commanders" do
+      it "adds the commander to the deck" do
+        put "/api/v1/decks/#{deck.id}", params: { card_id: card.id, commander: true}
+
+        expect(response).to have_http_status(204)
+
+        expect(deck.cards.first.name).to eq(card.name)
       end
     end
   end
