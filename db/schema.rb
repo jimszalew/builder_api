@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20180126181757) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "legalities", default: [], array: true
-    t.string "slug", null: false
+    t.string "slug"
     t.string "printings", default: [], array: true
     t.index ["slug"], name: "index_cards_on_slug", unique: true
   end
