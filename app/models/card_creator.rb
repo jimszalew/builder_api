@@ -13,6 +13,7 @@ class CardCreator
               :printings
 
   def initialize(card)
+    # require "pry"; binding.pry
     @name          = card[:name]
     @cardTypes     = card[:type]
     @cmc           = card[:cmc]
