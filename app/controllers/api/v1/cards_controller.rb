@@ -5,7 +5,7 @@ class Api::V1::CardsController < ApplicationController
   end
 
   def show
-    @card = Card.friendly.find(params['id'])
+    @card = Card.find(params['id'])
     render json: @card
   end
 end

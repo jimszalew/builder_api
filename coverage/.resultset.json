@@ -129,8 +129,7 @@
       ],
       "/Users/jimszalewski/Repos/builder_api/app/models/card.rb": [
         1,
-        1,
-        1,
+        null,
         null
       ],
       "/Users/jimszalewski/Repos/builder_api/app/models/application_record.rb": [
@@ -180,16 +179,37 @@
         1,
         null
       ],
+      "/Users/jimszalewski/Repos/builder_api/app/controllers/api/v1/cards_controller.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/jimszalewski/Repos/builder_api/app/controllers/application_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/jimszalewski/Repos/builder_api/app/controllers/api/v1/deck_search_controller.rb": [
+        1,
+        1,
+        7,
+        7,
+        null,
+        null
+      ],
       "/Users/jimszalewski/Repos/builder_api/app/controllers/api/v1/card_search_controller.rb": [
         1,
         1,
         5,
         5,
         null,
-        null
-      ],
-      "/Users/jimszalewski/Repos/builder_api/app/controllers/application_controller.rb": [
-        1,
         null
       ],
       "/Users/jimszalewski/Repos/builder_api/app/controllers/api/v1/decks_controller.rb": [
@@ -220,14 +240,6 @@
         null,
         null
       ],
-      "/Users/jimszalewski/Repos/builder_api/app/controllers/api/v1/deck_search_controller.rb": [
-        1,
-        1,
-        7,
-        7,
-        null,
-        null
-      ],
       "/Users/jimszalewski/Repos/builder_api/app/controllers/api/v1/commanders_controller.rb": [
         1,
         1,
@@ -244,19 +256,6 @@
       ],
       "/Users/jimszalewski/Repos/builder_api/app/controllers/api/v1/deck_cards_controller.rb": [
         1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/jimszalewski/Repos/builder_api/app/controllers/api/v1/cards_controller.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
         1,
         1,
         1,
@@ -292,6 +291,6 @@
         0
       ]
     },
-    "timestamp": 1517011070
+    "timestamp": 1517444169
   }
 }

@@ -13,11 +13,11 @@ describe "Card API", type: :request do
     expect(cards.count).to eq(5)
   end
 
-  it "returns a card by name" do
+  it "returns a single card" do
     create(:card)
     card1 = Card.first
 
-    get "/api/v1/cards/#{card1.slug}"
+    get "/api/v1/cards/#{card1.id}"
 
     expect(response).to be_success
 
