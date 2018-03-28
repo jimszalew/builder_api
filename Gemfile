@@ -22,6 +22,7 @@ gem 'brakeman'
 gem 'rubycritic'
 gem 'will_paginate'
 gem 'money-rails'
+gem 'loofah', '~> 2.2.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
